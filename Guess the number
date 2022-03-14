@@ -1,0 +1,39 @@
+import random
+a = random.randint(1,10)
+
+b = input('Indovina il numero: ')
+n = 10
+again = True
+while again:
+  while n > 1:
+    if a == int(b):
+      print('Bravo.. Hai indovinato')
+      new = input('Vuoi giocare ancora (y/n): ')
+      if new == 'y':
+        again == True
+        n = 10
+        a = random.randint(1,10)
+        b = input('Indovina il numero: ')
+      else:
+        again == False
+        print('A presto')
+        n = 0
+        break
+    else:
+        n -= 1
+        print(f'Hai sbagliato.. Hai ancora {n} tentativi: ')
+        b = input()
+        if n == 1:
+          print('Non hai più tentativi.. Hai perso..')
+          print('Il numero da indovinare era '+ str(a))
+          new = input('Vuoi giocare ancora (y/n): ')
+          if new == 'y':
+            again == True
+            n = 10
+            a = random.randint(1,10)
+            b = input('Indovina il numero: ')
+          else:
+            again == False
+            print('A presto')
+            n = 0
+            break
