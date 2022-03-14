@@ -18,7 +18,6 @@ while again:
         again == False
         print('A presto')
         n = 0
-        break
     else:
         n -= 1
         print(f'Hai sbagliato.. Hai ancora {n} tentativi: ')
@@ -36,4 +35,3 @@ while again:
             again == False
             print('A presto')
             n = 0
-            break
