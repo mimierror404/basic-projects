@@ -5,7 +5,7 @@ b = input('Indovina il numero: ')
 n = 10
 again = True
 while again:
-  while n > 1:
+  while n > 0:
     if a == int(b):
       print('Bravo.. Hai indovinato')
       new = input('Vuoi giocare ancora (y/n): ')
@@ -22,7 +22,7 @@ while again:
         n -= 1
         print(f'Hai sbagliato.. Hai ancora {n} tentativi: ')
         b = input()
-        if n == 1:
+        if n == 0:
           print('Non hai più tentativi.. Hai perso..')
           print('Il numero da indovinare era '+ str(a))
           new = input('Vuoi giocare ancora (y/n): ')
